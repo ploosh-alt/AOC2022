@@ -1,0 +1,1 @@
+input.split("\n").map(pairs => pairs.split(",").map(range => range.split("-").map(value => parseInt(value))).reduce((cur, next) => (cur[0] >= next[0] && cur[1] <= next[1]) || (next[0] >= cur[0] && next[1] <= cur[1]))).filter(item => item).length
