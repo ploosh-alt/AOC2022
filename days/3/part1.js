@@ -1,0 +1,1 @@
+input.split("\n").map(sack => sack.match(new RegExp(`.{1,${sack.length / 2}}`, 'g')).map(compartment => compartment.split('')).reduce((cur, next) => cur.map(item => next.indexOf(item) != -1 ? item : false).filter(item => item))[0]).map(char => char.charCodeAt(0) <= 90 ? char.charCodeAt(0) - 38 : char.charCodeAt(0) - 96).reduce((cur, next) => cur + next);
