@@ -1,0 +1,1 @@
+input.match(/(?:.+\n?){3}/g).map(elves => elves.split("\n").slice(0, 3).map(sack => sack.split('')).reduce((cur, next) => cur.map(item => next.indexOf(item) != -1 ? item : false)).filter(item => item)[0]).map(char => char.charCodeAt(0) <= 90 ? char.charCodeAt(0) - 38 : char.charCodeAt(0) - 96).reduce((cur, next) => cur + next);
