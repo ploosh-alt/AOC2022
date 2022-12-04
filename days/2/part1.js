@@ -1,0 +1,1 @@
+input.split("\n").map(round => round.split(' ').reduce((opponent, me) => (me == "X" ? 1 : (me == "Y" ? 2 : 3)) + (((me == "X" && opponent == "C") || (me == "Y" && opponent == "A") || (me == "Z" && opponent == "B")) ? 6 : 0) + (((me == "X" && opponent == "A") || (me == "Y" && opponent == "B") || (me == "Z" && opponent == "C")) ? 3 : 0))).reduce((cur, next) => cur + next);
